@@ -63,7 +63,7 @@ d_unb <- (1 - (3 / (4 * (N - 1) - 1))) * d_av
 
 # Results
 
-The mean reaction time of participants in the Congruent condition was lower than the mean of participants in the Incongruent condition. A dependent t-test indicated that we could reject the null-hypothesis, t(130) = 18.04, p = .25, Hedges' g = 0.25. There was also a marginally significant difference in accuracy between conditions, p = .07. Accuracy did not differ between congruent and incongruent trials (p = .34), confirming that accuracy was unaffected by congruency. The congruency effect on reaction time was highly significant, p = .000.
+The mean reaction time of participants in the Congruent condition was lower than the mean of participants in the Incongruent condition. A dependent t-test indicated that we could reject the null-hypothesis, t(130) = 18.04, p = .25, Cohen's dz = 0.25. There was also a marginally significant difference in accuracy between conditions, p = .07. Accuracy did not differ between congruent and incongruent trials (p = .34), confirming that accuracy was unaffected by congruency. The congruency effect on reaction time was highly significant, p = .000.
 
 ```{r}
 #| echo: false
