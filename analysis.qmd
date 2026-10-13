@@ -28,7 +28,7 @@ Here we analyze a Stroop experiment. Students completed an online Stroop task an
 
 ```{r}
 setwd("C:/Users/dlakens/Desktop/stroop_study")
-stroop_data <- read.csv("stroop.csv", sep = " ", header = TRUE)
+stroop_data <- read.csv("stroop.csv")
 ```
 
 # Plotting the data
