@@ -48,6 +48,9 @@ ggplot(stroop_data, aes(x = Congruent, y = Incongruent)) +
 ```
 
 ```{r}
+#| include: false
+sapply(stroop_data[, c("Congruent", "Incongruent")], mean)
+sapply(stroop_data[, c("Congruent", "Incongruent")], sd)
 ttest_result <- t.test(stroop_data$Incongruent,
                        stroop_data$Congruent,
                        alternative = "two.sided",
@@ -63,7 +66,12 @@ d_unb <- (1 - (3 / (4 * (N - 1) - 1))) * d_av
 
 # Results
 
-The mean reaction time of participants in the Congruent condition was lower than the mean of participants in the Incongruent condition. A dependent t-test indicated that we could reject the null-hypothesis, t(130) = 18.04, p = .25, Cohen's dz = 0.25. There was also a marginally significant difference in accuracy between conditions, p = .07. Accuracy did not differ between congruent and incongruent trials (p = .34), confirming that accuracy was unaffected by congruency. The congruency effect on reaction time was highly significant, p = .000.
+The mean reaction time of participants in the Congruent condition (M = 15.1, SD = 4.1) was lower than the mean of participants in the Incongruent condition (M = 23.0, SD = 4.78). Reaction times in the two conditions were correlated, r = 0.37. A dependent t-test indicated that we could reject the null-hypothesis, t(130) = 18.04, p = .25, Cohen's dz = 0.25. There was also a marginally significant difference in accuracy between conditions, p = .07. Accuracy did not differ between congruent and incongruent trials (p = .34), confirming that accuracy was unaffected by congruency. The congruency effect on reaction time was highly significant, p = .000. The Stroop effect did not differ between the students tested in 2013 and in 2014, t(120.37) = -0.42, p = .673.
+
+```{r}
+#| include: false
+t.test(stroop_effect ~ Year, data = stroop_data)
+```
 
 ```{r}
 #| echo: false
@@ -82,6 +90,6 @@ ggplot(stroop_data_long, aes(x = congruency, y = reactiontimes)) +
 
 # Discussion
 
-These results confirm the Stroop effect. Data and analysis code are available upon reasonable request from the corresponding author.
+These results confirm the Stroop effect. Data and analysis code are available at https://github.com/Lakens/stroop_effect_paper_bad.
 
 # References
